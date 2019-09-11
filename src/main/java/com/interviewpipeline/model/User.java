@@ -4,6 +4,7 @@ import java.util.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -12,5 +13,6 @@ public class User {
 	
 	String UserName;
 	
-//	List<Stage> stageList = new ArrayList<>();
+	@OneToMany
+	List<Stage> stageList = new ArrayList<>();
 }
